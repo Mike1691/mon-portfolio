@@ -184,31 +184,31 @@ const PROJECTS = [
   {
     id: "system-identification",
 
-title: "Identification of a Closed-Loop Dynamic System",
+    title: "Identification of a Closed-Loop Dynamic System",
 
-org: "System Identification — LINMA2875",
+    org: "System Identification — LINMA2875",
 
-period: "2025",
+    period: "2025",
 
-category: "signal",
+    category: "signal",
 
-tags: ["Identification", "Frequency Analysis", "Model Validation"],
+    tags: ["Identification", "Frequency Analysis", "Model Validation"],
 
-problem:
+    problem:
 
-"A real physical system is rarely known analytically: a usable model must be built directly from input-output measurements.",
+    "A real physical system is rarely known analytically: a usable model must be built directly from input-output measurements.",
 
-solution:
+    solution:
 
-"Application of parametric and nonparametric methods (frequency analysis, regression, maximum likelihood) to identify a closed-loop dynamic system and validate the resulting model.",
+    "Application of parametric and nonparametric methods (frequency analysis, regression, maximum likelihood) to identify a closed-loop dynamic system and validate the resulting model.",
 
-result:
+    result:
 
-"Model identified and validated by comparison with independent test data, with quantification of uncertainty and discussion of the persistence of the input signal excitation.",
+    "Model identified and validated by comparison with independent test data, with quantification of uncertainty and discussion of the persistence of the input signal excitation.",
 
-images: ["assets/img/projects/sysid-1.jpg"],
+    images: ["assets/img/projects/sysid-1.jpg"],
 
-links: {},
+    links: {},
   },
 
   {
