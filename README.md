@@ -1,4 +1,4 @@
-# Portfolio — Mikhaïl Watchueng Tchekam
+<!-- # Portfolio — Mikhaïl Watchueng Tchekam
 
 Site vitrine statique (HTML5 / CSS3 / JS vanilla, sans build step) prêt à ouvrir dans VS Code.
 
@@ -80,4 +80,4 @@ Le formulaire n'a pas de backend : il ouvre le client mail de l'utilisateur avec
 pré-rempli (`mailto:`). Si tu veux un vrai envoi silencieux (sans ouvrir le client mail), branche
 un service comme [Formspree](https://formspree.io) ou [Web3Forms](https://web3forms.com) — il
 suffit de remplacer l'action du `<form id="contactForm">` dans `index.html` par leur endpoint et
-d'adapter le `submit` handler dans `js/script.js`.
+d'adapter le `submit` handler dans `js/script.js`. -->

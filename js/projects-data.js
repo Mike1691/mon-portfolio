@@ -19,264 +19,382 @@
 const PROJECTS = [
   {
     id: "oct-retina-depth",
-    title: "Estimation de profondeur outil–rétine par OCT",
+
+    title: "Tool-to-retina depth estimation using OCT",
     org: "BruBotics — Research Intern",
-    period: "2025 — présent",
+
+    period: "2025 — present",
+
     category: "vision",
-    tags: ["OCT", "Vision 3D", "Shadow-based depth", "Chirurgie robotisée"],
+
+    tags: ["OCT", "3D Vision", "Shadow-based depth", "Robotic Surgery"],
     problem:
-      "En chirurgie oculaire assistée par robot, le chirurgien manque d'un retour fiable et en temps réel sur la distance entre l'instrument et la rétine, ce qui augmente le risque de perforation lors d'interventions à haute précision.",
+
+    "In robot-assisted eye surgery, surgeons lack reliable, real-time feedback on the distance between the instrument and the retina, increasing the risk of perforation during high-precision procedures.",
     solution:
-      "Développement d'un pipeline de traitement d'images OCT combinant segmentation des B-scans, détection d'ombre projetée par l'outil et reconstruction 3D, afin d'estimer la profondeur outil–tissu sans capteur additionnel.",
+
+    "Development of an OCT image processing pipeline combining B-scan segmentation, tool shadow detection, and 3D reconstruction to estimate tool-to-tissue depth without an additional sensor.",
+
     result:
-      "Prototype fonctionnel d'estimation de profondeur intégré aux travaux de recherche de BruBotics sur la chirurgie oculaire robotisée, posant les bases d'un retour de profondeur exploitable en conditions expérimentales.",
-    images: [
-      "assets/img/projects/oct-retina-1.jpg",
-      "assets/img/projects/oct-retina-2.jpg",
+
+    "Functional depth estimation prototype integrated into BruBotics' research on robotic eye surgery, laying the groundwork for usable depth feedback in experimental conditions.", 
+    pictures: [ 
+    "assets/img/projects/oct-retina-1.jpg", 
+    "assets/img/projects/oct-retina-2.jpg",
     ],
     links: { github: "", video: "" },
   },
   {
     id: "medical-imaging-pipeline",
-    title: "Pipeline de reconstruction multimodale — IRM / CT / échographie",
+
+    title: "Multimodal Reconstruction Pipeline — MRI / CT / Ultrasound",
+
     org: "Medical Imaging — LGBIO2050",
-    period: "2025",
+
+    period: "2024",
+
     category: "vision",
-    tags: ["IRM", "CT", "Transformée de Radon", "MATLAB"],
+
+    tags: ["MRI", "CT", "Radon Transform", "MATLAB"],
+
     problem:
-      "Comparer et exploiter correctement des modalités d'imagerie médicale très différentes (IRM, CT, échographie) exige de comprendre leur formation physique du signal avant tout traitement.",
+
+    "Compare and correctly utilize very different medical imaging modalities (MRI, CT, ultrasound) requires understanding their physical signal formation before any processing.",
+
     solution:
-      "Implémentation en MATLAB de chaînes de traitement complètes : reconstruction par rétroprojection filtrée à partir de sinogrammes CT, traitement du k-space en IRM, débruitage et recalage d'images.",
+
+    "MATLAB implementation of complete processing chains: filtered backprojection reconstruction from CT sinograms, k-space processing in MRI, image denoising and registration.",
+
     result:
-      "Trois rapports techniques évalués, portant sur le débruitage, la segmentation et le recalage d'images médicales, avec une compréhension opérationnelle des compromis résolution / bruit / contraste entre modalités.",
-    images: ["assets/img/projects/medical-imaging-1.jpg"],
+
+    "Three evaluated technical reports, covering denoising, segmentation, and registration of medical images, with an operational understanding of the resolution/noise/contrast trade-offs between modalities.",
+    images: ["assets/img/projects/medical-imaging-1.jpg"], 
     links: {},
   },
   {
     id: "computational-geometry",
-    title: "Maillage géométrique — Delaunay & diagrammes de Voronoi",
+
+    title: "Geometric Meshing — Delaunay & Voronoi Diagrams",
+
     org: "Computational Geometry — LMECA2170",
-    period: "2025",
+
+    period: "2024",
+
     category: "vision",
-    tags: ["Triangulation de Delaunay", "OpenGL", "Modélisation géométrique"],
+
+    tags: ["Delaunay Triangulation", "OpenGL", "Geometric Modeling"],
     problem:
-      "La simulation numérique de dispositifs biomédicaux (implants, structures anatomiques) nécessite des maillages géométriques robustes et adaptés à la géométrie du problème.",
+
+    "Numerical simulation of biomedical devices (implants, anatomical structures) requires robust geometric meshes adapted to the geometry of the problem.",
     solution:
-      "Implémentation d'algorithmes de triangulation de Delaunay, d'enveloppes convexes 2D/3D et de représentation de surfaces, avec une petite application de visualisation développée en OpenGL.",
+
+    "Implementation of Delaunay triangulation algorithms, 2D/3D convex hulls, and surface representation, with a small visualization application developed in OpenGL.",
     result:
-      "Outils de maillage réutilisables pour la modélisation géométrique de structures complexes, en support à des applications de conception assistée par ordinateur en génie biomédical.",
-    images: ["assets/img/projects/comp-geometry-1.jpg"],
+
+    "Reusable meshing tools for the geometric modeling of complex structures, supporting computer-aided design applications in biomedical engineering.",
+    images: ["assets/img/projects/comp-geometry-1.jpg"], 
     links: {},
   },
 
   {
     id: "gait-event-detection-imu",
-    title: "Détection temps réel des événements de marche par IMU — étude comparative",
-    org: "Mémoire de Master — EPL, promoteur Pr. Renaud Ronsse",
+
+    title: "Real-time detection of gait events by IMU — comparative study",
+    org: "Master's thesis — EPL, supervisor Prof. Renaud Ronsse",
     period: "2024 — 2025",
     category: "signal",
-    tags: ["IMU", "Temps réel", "Filtre de Kalman", "Oscillateur adaptatif", "Revue systématique"],
+
+    tags: ["IMU", "Real-time", "Kalman filter", "Adaptive oscillator", "Systematic review"],
     problem:
-      "Le pilotage de prothèses et de dispositifs de rééducation robotisée dépend d'une détection précise et en temps réel des événements clés de la marche (contact initial, contact final) : une erreur de seulement 50 ms peut désynchroniser l'appareil et réduire son efficacité clinique.",
+
+    "The control of prostheses and robotic rehabilitation devices depends on precise, real-time detection of key gait events (initial contact, final contact): an error of just 50 ms can desynchronize the device and reduce its clinical effectiveness.",
     solution:
-      "Après une revue systématique de la littérature (528 articles PubMed/IEEE/Scopus, 32 retenus, 12 méthodes identifiées), implémentation et comparaison de deux algorithmes temps réel — R-GED (seuil de vitesse angulaire) et Oscillateur Adaptatif — sur des IMU placées au tibia, à la hanche et au pelvis, avec filtrage Butterworth causal + Kalman (paramètres optimisés par MLE et Expectation-Maximization), validés contre une méthode de référence par plaques de force (CdP-slope) sur tapis roulant à 3 et 4 km/h.",
+
+    "After a systematic literature review (528 PubMed/IEEE/Scopus articles, 32 selected, 12 methods identified), implementation and comparison of two real-time algorithms — R-GED (angular velocity threshold) and Adaptive Oscillator — on IMUs placed on the tibia, hip, and pelvis, with causal Butterworth + Kalman filtering (parameters optimized by MLE and Expectation-Maximization), validated against a reference method using force plates (CdP-slope) on a treadmill at 3 and 4 km/h.",
+
     result:
-      "R-GED atteint un taux de détection correcte de 95,9–100% avec une erreur temporelle moyenne de 2 à 4,3 ms (latence sous la milliseconde) ; l'Oscillateur Adaptatif se montre plus robuste et biomécaniquement plus fidèle (position du contact final à 56,8% du cycle vs. cible de 60%), au prix d'une latence légèrement supérieure. Les deux approches sont proposées comme complémentaires, avec une piste d'amélioration par fusion avec un modèle de Markov caché (HMM) pour combiner rapidité et robustesse.",
-    images: ["assets/img/projects/gait-imu-1.png", "assets/img/projects/gait-imu-2.png"],
+
+    "R-GED achieves a correct detection rate of 95.9–100% with an average temporal error of 2 to 4.3 ms (latency under one millisecond); the Adaptive Oscillator proves more robust and biomechanically more accurate (final contact position at 56.8% of the cycle vs. target of 60%), at the cost of a slightly higher latency. The two approaches are proposed as complementary, with a potential for improvement through fusion with a Hidden Markov Model (HMM) to combine speed and robustness.",
+
+    images: ["assets/img/projects/gait-imu-1.png", "assets/img/projects/gait-imu-2.png"], 
     links: {},
   },
   {
     id: "eeg-vibrotactile",
-    title: "Exploration de patterns EEG & traitement vibrotactile",
+
+    title: "EEG Pattern Exploration & Vibrotactile Processing",
     org: "Neurotech, Leuven — Research Project Member",
     period: "2024 — 2025",
     category: "signal",
-    tags: ["EEG", "Traitement du signal", "Python", "Neurotechnologie"],
+
+    tags: ["EEG", "Signal Processing", "Python", "Neurotechnology"],
     problem:
-      "Les signaux EEG et les retours vibrotactiles sont bruités et de haute dimension, rendant difficile l'identification de patterns exploitables pour des applications de neurotechnologie.",
+
+    "EEG signals and vibrotactile feedback are noisy and high-dimensional, making it difficult to identify usable patterns for neurotechnology applications.",
     solution:
-      "Construction de pipelines Python pour le prétraitement, le filtrage fréquentiel et l'exploration de patterns EEG, couplés à l'analyse de signaux vibrotactiles pour des scénarios d'interface homme-machine.",
+
+    "Construction of Python pipelines for EEG preprocessing, frequency filtering, and pattern exploration, coupled with vibrotactile signal analysis for human-machine interface scenarios.",
     result:
-      "Pipelines d'analyse réutilisables ayant permis d'isoler des patterns EEG pertinents, contribuant aux travaux exploratoires de l'équipe Neurotech sur le retour sensoriel.",
-    images: ["assets/img/projects/eeg-1.jpg"],
+
+    "Reusable analysis pipelines that enabled the isolation of relevant EEG patterns, contributing to the Neurotech team's exploratory work on sensory feedback.",
+    images: ["assets/img/projects/eeg-1.jpg"], 
     links: {},
   },
   {
     id: "bioinstrumentation",
-    title: "Analyse de signaux ECG / EEG — chaîne d'acquisition biomédicale",
+
+    title: "ECG/EEG Signal Analysis — Biomedical Acquisition Chain",
+
     org: "Bioinstrumentation — LGBIO2020",
-    period: "2026",
+
+    period: "2024",
+
     category: "signal",
-    tags: ["ECG", "Filtrage", "PCA", "Régression"],
+
+    tags: ["ECG", "Filtering", "PCA", "Regression"],
+
     problem:
-      "Extraire une information clinique fiable (diagnostic, décision) à partir de signaux physiologiques bruts nécessite une chaîne complète : acquisition, filtrage, réduction de dimension puis classification.",
+
+    "Extracting reliable clinical information (diagnosis, decision) from raw physiological signals requires a complete chain: acquisition, filtering, dimensionality reduction, and then classification.",
+
     solution:
-      "Mise en œuvre d'algorithmes d'analyse mono- et multivariée (PCA, régression linéaire et non-linéaire, classification) appliqués à des signaux biomédicaux réels (ECG, potentiels évoqués).",
+
+    "Implementation of mono- and multivariate analysis algorithms (PCA, linear and non-linear regression, classification) applied to real biomedical signals (ECG, evoked potentials).",
+
     result:
-      "Chaîne de traitement validée sur des jeux de données physiologiques, avec une évaluation critique de la robustesse des méthodes de filtrage et de classification retenues.",
-    images: ["assets/img/projects/bioinstru-1.jpg"],
+
+    "Processing chain validated on physiological datasets, with a critical evaluation of the robustness of the selected filtering and classification methods.",
+    images: ["assets/img/projects/bioinstru-1.jpg"], 
     links: {},
   },
   {
     id: "biomechanics-fem",
-    title: "Modélisation par éléments finis d'un système musculosquelettique",
+
+    title: "Finite Element Modeling of a Musculoskeletal System",
     org: "Biomechanics — LGBIO2040",
-    period: "2026",
+    period: "2025",
     category: "signal",
-    tags: ["Éléments finis", "Biomécanique", "Imagerie"],
-    problem:
-      "Comprendre la (mal)fonction d'un système biomécanique requiert de relier structure, propriétés mécaniques et comportement fonctionnel observé.",
-    solution:
-      "Caractérisation expérimentale d'un tissu biomécanique puis construction d'un modèle par éléments finis, à partir d'images segmentées, pour simuler sa réponse mécanique.",
-    result:
-      "Modèle numérique validé qualitativement par rapport aux observations expérimentales, illustrant l'apport de la simulation à la compréhension de pathologies musculosquelettiques.",
+    tags: ["Finite Elements", "Biomechanics", "Imaging"],
+    problem: "Understanding the (mal)function of a biomechanical system requires linking structure, mechanical properties, and observed functional behavior.",
+    solution: "Experimental characterization of a biomechanical tissue followed by the construction of a finite element model, from segmented images, to simulate its mechanical response.",
+    result: "Numerical model qualitatively validated against experimental observations, illustrating the contribution of simulation to the understanding of musculoskeletal pathologies.",
     images: ["assets/img/projects/biomech-1.jpg"],
     links: {},
   },
   {
     id: "system-identification",
-    title: "Identification d'un système dynamique en boucle fermée",
-    org: "System Identification — LINMA2875",
-    period: "2027",
-    category: "signal",
-    tags: ["Identification", "Analyse fréquentielle", "Validation de modèle"],
-    problem:
-      "Un système physique réel est rarement connu analytiquement : il faut construire un modèle exploitable directement à partir de mesures entrées-sorties.",
-    solution:
-      "Application de méthodes paramétriques et non paramétriques (analyse fréquentielle, régression, maximum de vraisemblance) pour identifier un système dynamique en boucle fermée et valider le modèle obtenu.",
-    result:
-      "Modèle identifié et validé par comparaison à des données de test indépendantes, avec quantification de l'incertitude et discussion de la persistance de l'excitation du signal d'entrée.",
-    images: ["assets/img/projects/sysid-1.jpg"],
-    links: {},
+
+title: "Identification of a Closed-Loop Dynamic System",
+
+org: "System Identification — LINMA2875",
+
+period: "2025",
+
+category: "signal",
+
+tags: ["Identification", "Frequency Analysis", "Model Validation"],
+
+problem:
+
+"A real physical system is rarely known analytically: a usable model must be built directly from input-output measurements.",
+
+solution:
+
+"Application of parametric and nonparametric methods (frequency analysis, regression, maximum likelihood) to identify a closed-loop dynamic system and validate the resulting model.",
+
+result:
+
+"Model identified and validated by comparison with independent test data, with quantification of uncertainty and discussion of the persistence of the input signal excitation.",
+
+images: ["assets/img/projects/sysid-1.jpg"],
+
+links: {},
   },
 
   {
     id: "ml-classification",
-    title: "Comparaison de classificateurs — arbres, SVM, bayésien",
+
+    title: "Comparison of Classifiers — Trees, SVM, Bayesian",
+
     org: "Machine Learning: Classification — LINFO2262",
-    period: "2027",
+
+    period: "2026",
+
     category: "ml",
-    tags: ["SVM", "Random Forest", "Naïve Bayes", "Évaluation ROC"],
+
+    tags: ["SVM", "Random Forest", "Naïve Bayes", "ROC Evaluation"],
     problem:
-      "Choisir le bon algorithme de classification pour un problème donné exige une évaluation rigoureuse et comparative, pas seulement l'application d'un modèle par défaut.",
+
+    "Choosing the right classification algorithm for a given problem requires rigorous comparative evaluation, not just the application of a default model.",
     solution:
-      "Implémentation et comparaison de plusieurs familles de classificateurs (arbres de décision, forêts aléatoires, SVM à marge maximale, classifieur bayésien naïf) avec tests d'hypothèses et analyse ROC.",
+
+    "Implementation and comparison of several classifier families (decision trees, random forests, maximum margin SVM, naive Bayesian classifier) ​​with hypothesis testing and ROC analysis.",
     result:
-      "Recommandation argumentée de l'algorithme le plus adapté selon la nature des données, appuyée par des comparaisons statistiques rigoureuses des performances.",
+
+    "A well-reasoned recommendation of the most suitable algorithm according to the nature of the data, supported by rigorous statistical performance comparisons.",
     images: ["assets/img/projects/ml-classif-1.png"],
     links: { github: "" },
   },
   {
     id: "ml-regression-dl",
-    title: "Réduction de dimension & réseaux profonds pour données biomédicales",
+
+    title: "Dimensionality Reduction & Deep Networks for Biomedical Data",
     org: "Machine Learning: Regression & Deep Networks — LELEC2870",
-    period: "2026",
+    period: "2024",
     category: "ml",
-    tags: ["CNN", "PCA / ICA", "MLP", "Sélection de variables"],
+    tags: ["CNN", "PCA / ICA", "MLP", "Variable Selection"],
     problem:
-      "Les données biomédicales sont souvent de haute dimension et bruitées : les exploiter directement avec des modèles profonds sans réduction ni sélection de variables mène à du surapprentissage.",
+
+    "Biomedical data are often high-dimensional and noisy: directly exploiting them with deep models without reduction or variable selection leads to overfitting.",
     solution:
-      "Combinaison de techniques de réduction de dimension (PCA, ICA) et de sélection de variables avec des architectures de régression non-linéaire (MLP, RBFN, CNN) pour la prédiction et la visualisation.",
+
+    "Combining dimensionality reduction techniques (PCA, ICA) and variable selection with nonlinear regression architectures (MLP, RBFN, CNN) for prediction and visualization.",
     result:
-      "Pipeline de modélisation robuste avec sélection de modèle justifiée, améliorant la généralisation par rapport à une architecture profonde appliquée brute.",
+
+    "Robust modeling pipeline with justified model selection, improving generalization compared to a raw applied deep architecture.",
     images: ["assets/img/projects/ml-regression-1.jpg"],
     links: {},
   },
   {
     id: "bioinformatics",
-    title: "Inférence phylogénétique & analyse du transcriptome",
+
+    title: "Phylogenetic Inference & Transcriptome Analysis",
+
     org: "Bioinformatics — LGBIO2010",
+
     period: "2025",
+
     category: "ml",
-    tags: ["HMM", "R / Bioconductor", "Phylogénie", "Biomarqueurs"],
+
+    tags: ["HMM", "R / Bioconductor", "Phylogeny", "Biomarkers"],
+
     problem:
-      "L'exploitation de données biologiques à grande échelle (séquences, expression génique) nécessite des outils bio-informatiques dédiés, souvent absents des boîtes à outils de data science classiques.",
+
+    "Large-scale exploitation of biological data (sequences, gene expression) requires dedicated bioinformatics tools, often lacking in standard data science toolkits.",
+
     solution:
-      "Développement en R d'algorithmes d'alignement de séquences, de modèles de Markov cachés et de construction d'arbres phylogénétiques, appliqués à l'analyse de l'expression génique et à la sélection de biomarqueurs.",
+
+    "Development in R of sequence alignment algorithms, hidden Markov models, and phylogenetic tree construction, applied to gene expression analysis and biomarker selection.",
+
     result:
-      "Pipeline reproductible sur la plateforme Inginious, avec identification de biomarqueurs candidats et arbres phylogénétiques cohérents avec la littérature de référence.",
+
+    "Reproducible pipeline on the Inginious platform, with identification of candidate biomarkers and phylogenetic trees consistent with the reference literature.",
+
     images: ["assets/img/projects/bioinfo-1.jpg"],
     links: {},
   },
 
   {
     id: "surgical-robotics-orsi",
-    title: "Immersion en robotique chirurgicale",
+
+    title: "Immersion in Surgical Robotics",
     org: "Orsi Academy — Junior Member",
     period: "2024 — 2025",
     category: "robotics",
-    tags: ["Chirurgie robotisée", "Évaluation de performance", "System modelling"],
+
+    tags: ["Robotic Surgery", "Performance Evaluation", "System Modelling"],
     problem:
-      "Le passage de la robotique industrielle à la robotique chirurgicale introduit des contraintes fortes de sécurité, de précision et d'interaction avec un opérateur humain.",
+
+    "The transition from industrial robotics to surgical robotics introduces significant constraints in terms of safety, precision, and interaction with a human operator.",
     solution:
-      "Exposition pratique aux plateformes de chirurgie robot-assistée : modélisation système, prise en main des contrôleurs et participation à des protocoles d'évaluation de performance.",
+
+    "Hands-on exposure to robot-assisted surgery platforms: system modeling, familiarization with controllers, and participation in performance evaluation protocols.",
     result:
-      "Compréhension opérationnelle des contraintes de conception propres à la robotique chirurgicale, directement mobilisée dans les travaux ultérieurs en imagerie et robotique médicale.",
+
+    "Operational understanding of the design constraints specific to surgical robotics, directly applicable to subsequent work in medical imaging and robotics.",
     images: ["assets/img/projects/orsi-1.jpg"],
     links: {},
   },
   {
     id: "mobile-robot-control",
-    title: "Planification de trajectoire & contrôle d'un robot mobile",
+
+    title: "Trajectory Planning & Control of a Mobile Robot",
+
     org: "Robot Modelling and Control — LELME2732",
-    period: "2027",
+
+    period: "2025",
+
     category: "robotics",
-    tags: ["Cinématique", "Contrôle en boucle fermée", "Localisation"],
+
+    tags: ["Kinematics", "Closed-Loop Control", "Localization"],
+
     problem:
-      "Un robot mobile évoluant en environnement non structuré doit combiner modèle cinématique, planification de trajectoire et localisation pour se déplacer de façon fiable.",
+
+    "A mobile robot operating in an unstructured environment must combine kinematic modeling, trajectory planning, and localization to move reliably.",
+
     solution:
-      "Dérivation des modèles géométrique, cinématique et dynamique du robot, synthèse d'un contrôleur de trajectoire et implémentation d'un algorithme de localisation, testés sur plateforme réelle.",
+
+    "Derivation of the robot's geometric, kinematic, and dynamic models, synthesis of a trajectory controller, and implementation of a localization algorithm, tested on a real-world platform.",
+
     result:
-      "Robot mobile capable de suivre une trajectoire planifiée avec correction en boucle fermée, documenté dans un rapport de projet incluant démonstration vidéo.",
+
+    "Mobile robot capable of following a planned trajectory with closed-loop correction, documented in a project report including a video demonstration.",
+
     images: ["assets/img/projects/mobile-robot-1.jpg"],
     links: { video: "" },
   },
   {
     id: "biorobotics",
-    title: "Réplication d'un robot bio-inspiré à partir de la littérature",
+
+    title: "Replication of a bio-inspired robot from the literature",
+
     org: "Biorobotics — LMECA2335",
-    period: "2027",
+
+    period: "2024",
+
     category: "robotics",
-    tags: ["Bio-inspiration", "Interfaces haptiques", "Simulation"],
-    problem:
-      "Beaucoup de résultats publiés en biorobotique restent difficiles à reproduire et à situer par rapport à l'état de l'art faute d'implémentation ouverte.",
-    solution:
-      "Analyse critique d'une publication scientifique sur un robot bio-inspiré, reproduction de ses résultats clés en simulation et conception du contrôleur d'une interface haptique associée.",
-    result:
-      "Résultats de la publication reproduits avec succès en environnement simulé, présentés lors d'une communication orale incluant une évaluation critique des limites du modèle.",
+
+    tags: ["Bio-inspiration", "Haptic interfaces", "Simulation"],
+
+    problem: "Many published results in biorobotics remain difficult to reproduce and situate within the state of the art due to a lack of open implementation.",
+
+    solution:  "Critical analysis of a scientific publication on a bio-inspired robot, reproduction of its key results in simulation, and design of the controller for an associated haptic interface.",
+
+    result: "Results of the publication successfully reproduced in a simulated environment, presented in an oral communication including a critical evaluation of the model's limitations.",
+
     images: ["assets/img/projects/biorobotics-1.jpg"],
     links: {},
   },
   {
     id: "multibody-dynamics",
-    title: "Simulation multicorps d'un mécanisme articulé (ROBOTRAN)",
+
+    title: "Multibody Simulation of an Articulated Mechanism (ROBOTRAN)",
     org: "Multibody System Dynamics — LMECA2802",
-    period: "2027",
+
+    period: "2024",
+
     category: "robotics",
-    tags: ["ROBOTRAN", "Équations DAE", "Dynamique inverse"],
-    problem:
-      "La conception de robots ou de véhicules à boucles cinématiques complexes nécessite une génération automatique et fiable des équations dynamiques du système.",
-    solution:
-      "Modélisation d'un système mécanique articulé avec ROBOTRAN : génération automatique des équations dynamiques, intégration numérique du système DAE et analyse par dynamique inverse.",
-    result:
-      "Modèle multicorps validé numériquement, utilisé pour analyser le comportement dynamique du mécanisme et documenté dans un rapport de projet technique.",
+
+    tags: ["ROBOTRAN", "DAE Equations", "Inverse Dynamics"],
+
+    problem:  "The design of robots or vehicles with complex kinematic loops requires the automatic and reliable generation of the system's dynamic equations.",
+
+    solution: "Modeling of an articulated mechanical system with ROBOTRAN: automatic generation of dynamic equations, numerical integration of the DAE system, and inverse dynamics analysis.",
+
+    result:  "Numerically validated multibody model, used to analyze the dynamic behavior of the mechanism and documented in a technical project report.",
+
     images: ["assets/img/projects/multibody-1.jpg"],
     links: {},
   },
   {
     id: "medical-device-design",
-    title: "Conception d'un dispositif médico-chirurgical",
+
+    title: "Design of a Medical-Surgical Device",
+
     org: "Design of Medical Devices — LMECA2355",
-    period: "2026",
+
+    period: "2024",
+
     category: "robotics",
-    tags: ["Cahier des charges", "Biocompatibilité", "Matrix Requirements"],
-    problem:
-      "Concevoir un dispositif médical exige d'intégrer simultanément les contraintes cliniques (ergonomie, sécurité), réglementaires (certification) et industrielles (coût, biocompatibilité).",
-    solution:
-      "Formulation d'un cahier des charges à partir d'une analyse de besoin clinique, état de l'art des dispositifs existants et proposition de solution en collaboration avec cliniciens, géré via Matrix Requirements.",
-    result:
-      "Proposition de dispositif présentée devant un jury, avec traçabilité complète des exigences cliniques et techniques dans l'outil de gestion des exigences.",
-    images: ["assets/img/projects/medical-device-1.jpg"],
+
+    tags: ["Specifications", "Biocompatibility", "Matrix Requirements"],
+    problem: "Designing a medical device requires simultaneously integrating clinical (ergonomics, safety), regulatory (certification), and industrial (cost, biocompatibility) constraints.",
+
+    Solution: "Formulation of specifications based on a clinical needs analysis, a review of existing devices, and a proposed solution in collaboration with clinicians, managed via Matrix Requirements.",
+
+    Result: "Device proposal presented to a jury, with complete traceability of clinical and technical requirements in the requirements management tool.",
+
+    Images: ["assets/img/projects/medical-device-1.jpg"],
     links: {},
   },
 ];
