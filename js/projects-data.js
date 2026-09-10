@@ -82,7 +82,7 @@ const PROJECTS = [
       "Après une revue systématique de la littérature (528 articles PubMed/IEEE/Scopus, 32 retenus, 12 méthodes identifiées), implémentation et comparaison de deux algorithmes temps réel — R-GED (seuil de vitesse angulaire) et Oscillateur Adaptatif — sur des IMU placées au tibia, à la hanche et au pelvis, avec filtrage Butterworth causal + Kalman (paramètres optimisés par MLE et Expectation-Maximization), validés contre une méthode de référence par plaques de force (CdP-slope) sur tapis roulant à 3 et 4 km/h.",
     result:
       "R-GED atteint un taux de détection correcte de 95,9–100% avec une erreur temporelle moyenne de 2 à 4,3 ms (latence sous la milliseconde) ; l'Oscillateur Adaptatif se montre plus robuste et biomécaniquement plus fidèle (position du contact final à 56,8% du cycle vs. cible de 60%), au prix d'une latence légèrement supérieure. Les deux approches sont proposées comme complémentaires, avec une piste d'amélioration par fusion avec un modèle de Markov caché (HMM) pour combiner rapidité et robustesse.",
-    images: ["assets/img/projects/gait-imu-1.jpg", "assets/img/projects/gait-imu-2.jpg"],
+    images: ["assets/img/projects/gait-imu-1.png", "assets/img/projects/gait-imu-2.png"],
     links: {},
   },
   {
@@ -163,7 +163,7 @@ const PROJECTS = [
       "Implémentation et comparaison de plusieurs familles de classificateurs (arbres de décision, forêts aléatoires, SVM à marge maximale, classifieur bayésien naïf) avec tests d'hypothèses et analyse ROC.",
     result:
       "Recommandation argumentée de l'algorithme le plus adapté selon la nature des données, appuyée par des comparaisons statistiques rigoureuses des performances.",
-    images: ["assets/img/projects/ml-classif-1.jpg"],
+    images: ["assets/img/projects/ml-classif-1.png"],
     links: { github: "" },
   },
   {
